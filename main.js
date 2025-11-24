@@ -1,21 +1,6 @@
-import { RfcLoggingLevel, Server } from 'node-rfc';
+import { reloadIniFile, RfcLoggingLevel, Server } from 'node-rfc';
 
-// Create server instance
-
-// const serverConfig = {
-//   clientConnection: {
-//     user: 'ext_ematric',
-//     passwd: 'c!i90adk^5SV`i/8?MiB',
-//     ashost: '192.168.0.73',
-//     sysnr: '00',
-//     client: '100',
-//   },
-
-//   serverConnection: {
-//     gwhost: '192.168.0.73', // Gateway host
-//     gwserv: 'sapgw00', // Gateway service
-//     program_id: 'HT1_RFC_EMATRIC_TEST', // Program ID for registration
-//   },
+reloadIniFile();
 const serverConfig = {
   clientConnection: {
     user: 'GUPTA',
@@ -23,12 +8,14 @@ const serverConfig = {
     ashost: '192.168.0.73',
     sysnr: '00',
     client: '100',
+    dest: 'MME',
   },
 
   serverConnection: {
-    gwhost: '192.168.0.73', // Gateway host
-    gwserv: 'sapgw00', // Gateway service
-    program_id: 'HT1_RFC_EMATRIC_TEST', // Program ID for registration
+    //   gwhost: '192.168.0.73', // Gateway host
+    //   gwserv: 'sapgw00', // Gateway service
+    //    program_id: 'HT1_RFC_EMATRIC_TEST', // Program ID for registration
+    dest: 'MME_GATEWAY',
   },
 
   // SERVER OPTIONS
